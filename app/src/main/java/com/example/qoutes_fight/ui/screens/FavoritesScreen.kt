@@ -123,7 +123,7 @@ fun FavoriteQuoteCard(
                 .padding(16.dp)
         ) {
             Text(
-                text = "\"${quote.text}\"",
+                text = "\"${quote.displayText}\"",
                 style = MaterialTheme.typography.bodyLarge,
                 fontWeight = FontWeight.Medium,
                 color = MaterialTheme.colorScheme.onSurface
@@ -158,7 +158,7 @@ fun FavoriteQuoteCard(
                                 type = "text/plain"
                                 putExtra(
                                     Intent.EXTRA_TEXT,
-                                    "\"${quote.text}\"\n— ${quote.author}\n\nShared via Quotes Fight 🥊"
+                                    "\"${quote.displayText}\"\n— ${quote.author}\n\nShared via Quotes Fight 🥊"
                                 )
                             }
                             context.startActivity(

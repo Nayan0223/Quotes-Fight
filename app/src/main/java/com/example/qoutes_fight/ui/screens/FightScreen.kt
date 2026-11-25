@@ -242,7 +242,7 @@ fun FightQuoteCard(
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = "\"${quote.text}\"",
+                text = "\"${quote.displayText}\"",
                 style = MaterialTheme.typography.bodyLarge,
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Medium,

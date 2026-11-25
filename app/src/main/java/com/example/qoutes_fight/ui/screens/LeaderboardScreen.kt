@@ -138,7 +138,7 @@ fun LeaderboardItem(
 
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = "\"${quote.text}\"",
+                    text = "\"${quote.displayText}\"",
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Medium,
                     maxLines = 2,

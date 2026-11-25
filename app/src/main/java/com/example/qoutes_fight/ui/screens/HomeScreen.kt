@@ -120,7 +120,7 @@ fun HomeScreen(
                         type = "text/plain"
                         putExtra(
                             Intent.EXTRA_TEXT,
-                            "\"${quote.text}\"\n— ${quote.author}\n\nShared via Quotes Fight 🥊"
+                            "\"${quote.displayText}\"\n— ${quote.author}\n\nShared via Quotes Fight 🥊"
                         )
                     }
                     context.startActivity(Intent.createChooser(shareIntent, "Share Quote"))
@@ -180,7 +180,7 @@ fun QuoteCard(
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = quote.text,
+                text = quote.displayText,
                 style = MaterialTheme.typography.headlineSmall,
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.Medium,

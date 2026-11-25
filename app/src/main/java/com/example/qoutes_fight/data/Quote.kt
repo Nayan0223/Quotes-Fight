@@ -9,6 +9,20 @@ data class Quote(
     var losses: Int = 0,
     var isFavorite: Boolean = false
 ) {
+    val emoji: String
+        get() = when (category) {
+            "Motivation" -> "🚀"
+            "Life" -> "🌱"
+            "Wisdom" -> "🧠"
+            "Humor" -> "😄"
+            "Love" -> "💖"
+            "Strength" -> "💪"
+            else -> "✨"
+        }
+
+    val displayText: String
+        get() = "$text $emoji"
+
     val winRate: Float
         get() = if (wins + losses > 0) wins.toFloat() / (wins + losses) else 0f
 }
